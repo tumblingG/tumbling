@@ -1,0 +1,32 @@
+<section id="photo">
+	<div class="container">
+		<div class="row" style="position: relative;">
+			<div class="text-center">
+				<h2>{{title}}</h2>
+				<img class="img-responsive displayed" src="res/images/short.png" alt="about">
+			</div>
+			<ul class="filter nav nav-pills">
+				<li  ng-click="filter($event)">
+					<a data-value="all" class="active">所有</a>
+				</li>
+				<li  ng-click="filter($event)">
+					<a data-value="movie" >剧照</a>
+				</li>
+				<li  ng-click="filter($event)">
+					<a data-value="lift">生活</a>
+				</li>
+				<li  ng-click="filter($event)">
+					<a data-value="portrait">写真</a>
+				</li>
+			</ul>
+			<ul class="port2 photo-list">
+				<li data-type="{{photo.type}}" data-id="id-{{$index}}" ng-repeat="photo in Photos" class="col-md-4 col-sm-4 col-xs-6 port3">
+					<a><img ng-src="res/images/{{photo.image}}"></a>
+					<div class="link-top">
+						<i class="link"> </i>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" ng-controller="MainCtrl" ng-cloak>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="description" content="A responsive layout page that describes zhaoliying">
+        <meta name="author" content="Mr Li">
+        
+        <title ng-bind="title"></title>
+
+        <link rel="stylesheet" type="text/css" href="res/font/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+		
+    </head>
+    <body data-spy="scroll">
+        <!--导航栏-->
+    	<nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#tum_navbar_header">
+                    <span class="sr-only">导航栏</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="res/images/logo.png" alt="logo"></a>
+                </div> 
+                <div class="collapse navbar-collapse" id="tum_navbar_header">
+                    <ul class="nav navbar-nav navbar-right custom-menu" >
+                        <li class="active">
+                            <a goto="#home" href="#home" >主页</a>
+                        </li>
+                        <li>
+                            <a goto="#about" href="#about" >关于</a>
+                        </li>
+                        <li>
+                            <a goto="#movie" href="#movie" >最新影视</a>
+                        </li>
+                        <li>
+                            <a goto="#production" href="#production" >代表作品</a>
+                        </li>
+                        <li>
+                            <a goto="#photo" href="#photo" >剧照</a>
+                        </li>
+                        <li>
+                            <a goto="#contact" href="#contact" >联系</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--content-->
+        <div ng-include="'templates/content.html'"></div>
+        <!--contact-->
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-12">
+                            <div class="text-center color-elements">
+                                <h2>联系</h2>
+                                <p class="para">楚乔传就要开播了
+                                    <span>天生丽质的小骨又会带给我们什么惊喜呢？请联系我们
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <form class="inline" id="contactForm" name="contactForm" novalidate ng-submit="sendEmail()">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control" id="name" placeholder="姓名" required ng-model="name"/>
+                                            <p class="help-block text-danger" ng-show="contactForm.$dirty&&contactForm.name.$error.required&&submited">姓名不能为空</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control" id="email" placeholder="邮箱" required ng-model="email"/>
+                                            <p class="help-block text-danger" ng-show="contactForm.email.$dirty&&contactForm.email.$invalid&&submited">非法邮箱</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <input type="text" name="subject" class="form-control" id="subject" placeholder="主题" required ng-model="subject"/>
+                                            <p class="help-block text-danger" ng-show="contactForm.message.$dirty&&contactForm.subject.$error.required&&submited">主题不能为空</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 ">
+                                        <div class="form-group">
+                                            <textarea class="form-control" name="message" class="form-control" id="message" placeholder="消息" required ng-model="message" rows="7">
+                                            </textarea>
+                                            <p class="help-block text-danger" ng-show="contactForm.message.$dirty&&contactForm.message.$error.required&&submited">消息不能为空</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-offset-4 col-sm-4 col-xs-offset-3 col-xs-6">
+                                        <div class="form-group">
+                                            <input type="submit" class="btn btn-md btn-custom" value="发送消息"/>
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-sm-3 col-xs-6">
+                                        <div class="form-group">
+                                            <div id="response_holder"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 contact-msg">
+                                        <div id="success"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="address">
+             <div class="row">
+             <div class="col-sm-12 col-md-offset-2 col-md-8">
+                 
+             
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <i class="fa fa-2x fa-map-marker"></i>
+                            <span class="text">丽颖工作室</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <i class="fa fa-2x fa-phone"></i>
+                            <span class="text">0051 768622115</span>
+                         </div>
+                     </div>
+                    <div class="col-sm-4">    
+                        <div class="form-group">
+                            <i class="fa fa-2x fa-envelope"></i>
+                            <span class="text">mail.goos.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+       <!--baidu Map-->
+       <!--  <section id="location">
+            <div>
+                <div class="">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section> -->
+        <audio autoplay="autoplay"  loop="loop" src="res/music/huaqiangu.mp3"></audio>
+    </body>
+    <script src="bower_components/requirejs/require.js" data-main="js/main-built"></script>
+   <!--  <script src="http://api.map.baidu.com/api?v=2.0&ak=aLuq42PkQXpWkKTDCH9ZdxfR5as0Xoq3"></script>
+    <script src="js/baidumap.js"></script> -->
+    <!--[if lt IE 9]>
+		<script src="html5shiv/html5shiv.min.js"></script>
+		<script src="respond/respond.min.js"></script>
+    <![endif]-->
+</html>

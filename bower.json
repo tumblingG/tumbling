@@ -1,0 +1,25 @@
+{
+  "name": "tumbling",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "requirejs": "^2.3.3",
+    "angular-route": "^1.6.4",
+    "html5shiv": "^3.7.3",
+    "respond": "^1.4.2",
+    "quicksand": "^1.2.2",
+    "jquery-migrate": "1.1.1"
+  }
+}

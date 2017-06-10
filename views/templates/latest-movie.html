@@ -1,0 +1,27 @@
+<section id="movie">
+	<div class="container">
+		<div class="text-center">
+			<h2>{{title}}</h2>
+			<img class="img-responsive displayed" src="res/images/short.png">
+		</div>
+		<div class="row">
+			<div class="col-md-12 homeport1">
+				<div class="col-md-4 col-sm-12 col-xs-12 movie-item" ng-repeat="movie in Movies">
+					<figure class="effect-oscar">
+						<img ng-src="res/images/{{movie.image}}" alt="movie image" class="img-responsive">
+						<figcaption>
+							<h2>{{movie.title}}</h2>
+							<a>View more</a>
+						</figcaption>
+					</figure>
+					<p class="text-center">
+						{{movie.content | limitTo: 200}}
+					</p>
+					<div class="text-center">
+						<a href="{{movie.href}}" class="btn btn-primary btn-noborder-radius hvr-bounce-to-bottom">查看详情</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> 

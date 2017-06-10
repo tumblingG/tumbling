@@ -1,0 +1,36 @@
+{
+  "name": "tumbling",
+  "version": "0.0.0",
+  "author": "Mr Li",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "ejs": "~2.5.6",
+    "express": "~4.15.2",
+    "morgan": "~1.8.1",
+    "nodemailer": "^4.0.1",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-cssmin": "^2.2.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^0.12.0",
+    "grunt-contrib-qunit": "~0.5.2",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "jshint-stylish": "^2.2.1",
+    "serve-static": "^1.12.3"
+  }
+}

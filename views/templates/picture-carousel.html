@@ -1,0 +1,22 @@
+<header id="home" class="carousel slide">
+	<ul class="cb-slideshow">
+		<li ng-repeat="carousel in Carousels">
+			<span style="background-image: url(res/images/{{carousel.backgroundImage}});"></span>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="text-center"><h3>{{carousel.title}}</h3></div>
+					</div>
+				</div>
+				<h4 style="display: none;">{{carousel.subhead}}</h4>
+			</div>
+		</li>
+	</ul>
+	<div class="intro-scroller">
+		<a href="#about" class="inner-link">
+			<div class="mouse-icon" style="opacity: 1;">
+				<div class="wheel"></div>
+			</div>
+		</a>
+	</div>
+</header>

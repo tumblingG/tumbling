@@ -1,0 +1,29 @@
+<section id="production">
+	<div class="container">
+		<div class="text-center">
+			<h2>{{title}}</h2>
+			<img class="img-responsive displayed" src="res/images/short.png" alt="production">
+		</div>
+		<div class="row production-all">
+			<div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="production in Productions">
+				<div class="production-wrap">
+					<div class="production-img">
+						<img class="img-responsive" ng-src="res/images/{{production.image}}" alt="production image">
+					</div>
+					<div class="production-info">
+						<h3>{{production.name}}</h3>
+						<span>{{production.position}}</span>
+					</div>
+					<p>{{production.job}}</p>
+					<ul class="social-icons">
+						<li><a><i class="fa fa-umbrella"></i></a></li>
+						<li><a><i class="fa fa-paw"></i></a></li>
+						<li><a><i class="fa fa-paw"></i></a></li>
+						<li><a><i class="fa fa-umbrella"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+			
+	</div>
+</section>
