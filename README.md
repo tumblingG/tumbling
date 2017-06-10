@@ -18,6 +18,7 @@ bower install
 ```javascript
 npm start
 ```
+Then visit `http://localhost:3000` in your browser
 # pictures
 ##### mobile phone
 ![screenshot1.png](https://github.com/tumblingG/tumbling/blob/master/public/res/images/screenshot1.png)
