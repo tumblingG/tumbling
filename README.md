@@ -8,7 +8,7 @@ A response layout page with bootstrap,angular,node,express and requirejs
 * bower v1.8.0
 
 # Install packages
-you need to install the above environment first if you don't have been installed them,then
+you need to install the above environment firstly if you don't have been installed them,then
 ```javascript
 cd tumbling  //project root directory
 npm install
